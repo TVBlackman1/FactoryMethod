@@ -12,6 +12,12 @@ namespace Patterns.Decorator
             weapon.Reload();
             weapon = new WeaponFeatureDoubleAttack(weapon);
             weapon.Attack();
+
+            weapon.Reload();
+            weapon = new WeaponFeatureModifNAttack(weapon);
+            weapon.Attack();
+            weapon.Attack();
+            weapon.Attack();
         }
     }
 }

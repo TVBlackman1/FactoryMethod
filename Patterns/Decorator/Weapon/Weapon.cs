@@ -40,19 +40,4 @@ namespace Patterns.Decorator
             Console.WriteLine("Reload!");
         }
     }
-
-    class LaserRifle : Weapon
-    {
-        public LaserRifle(uint ammoMagazine) : base(ammoMagazine)
-        { }
-        public override void Attack()
-        {
-            base.Attack();
-            HighLight();
-        }
-        public virtual void HighLight() 
-        {
-            Console.WriteLine("Highlight enemies!");
-        }
-    }
 }

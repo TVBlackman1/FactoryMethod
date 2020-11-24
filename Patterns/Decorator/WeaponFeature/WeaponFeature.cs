@@ -32,28 +32,4 @@ namespace Patterns.Decorator
             weapon.Reload();
         }
     }
-
-    class WeaponFeatureDoubleAttack: WeaponFeature
-    {
-        public WeaponFeatureDoubleAttack(AbstractWeapon weapon) : base(weapon)
-        { }
-        public override void Attack()
-        {
-            base.Attack();
-            base.Attack();
-        }
-    }
-
-    class WeaponFeatureDoubleAmmo : WeaponFeature
-    {
-        public override uint AmmoMagazine
-        {
-            get
-            {
-                return AmmoMagazine * 2;
-            }
-        }
-        public WeaponFeatureDoubleAmmo(AbstractWeapon weapon) : base(weapon)
-        { }
-    }
 }
